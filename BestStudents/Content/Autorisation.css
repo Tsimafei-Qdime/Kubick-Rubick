@@ -1,0 +1,100 @@
+﻿.block1_auth {
+    background: #fff; /* Цвет фона */
+    border: 0.15vw solid #7a7b7e; /* Параметры рамки */
+    width: 23vw; /* Ширина кнопки */
+    height: 20vw; /* Высота */
+    border-radius: 4vw;
+    margin: auto;
+}
+
+.aut_auth {
+    font-size: 2vw;
+    margin-left: 13vw;
+    color: #fff;
+}
+
+.Text_auth {
+    margin-top: 2vw;
+    margin-left: 2vw;
+    font-size: 1.1vw;
+}
+
+
+
+.input_auth {
+    position: absolute;
+    margin-top: -1.6vw;
+    margin-left: 7.5vw;
+    width: 12vw;
+    height: 1.5vw;
+    font-size: 0.9vw;
+}
+
+.block_main_auth {
+    width: 37vw; /* Ширина кнопки */
+    height: 37vw; /* Высота */
+    position: relative;
+    margin: auto;
+    margin-top: 10vw;
+}
+
+.Tittle_auth {
+    margin: auto;
+    position: absolute;
+}
+
+
+/*Button Download*/
+.btn-oval_authorisation {
+    display: inline-block;
+    width: 18vw;
+    height: 4vw;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 1.2vw;
+    color: #fff;
+    text-decoration: none;
+    background: purple;
+    background-color: #f44336;
+    border-radius: 40vw;
+    border: 0.1vw solid purple;
+    font: bold 1.6vw/3.5vw Arial;
+    box-shadow: inset 0 0.1vw 0.1vw #edd8ff, inset 0.01vw 0 0.3vw #edd8ff, inset 0.1vw 0 0.5vw #edd8ff, inset 0 -0.1vw 0.1vw #edd8ff, 0 0 0.1vw rgba(0, 0, 0, 0.24);
+    position: absolute;
+    text-shadow: 0 0.1vw black;
+    outline: none;
+    top: 15vw;
+    margin-left: 2.6vw;
+}
+
+    .btn-oval_authorisation:before {
+        content: "";
+        position: absolute;
+        top: -1vw;
+        left: -1vw;
+        width: 20vw;
+        height: 20vw;
+        padding: 1vw;
+        background: black;
+        z-index: -1;
+        border-radius: 40vw;
+        box-shadow: inset 0 0.1vw 0.5vw #edd8ff;
+    }
+
+    .btn-oval_authorisation:hover {
+        background: #fb6d62;
+        box-shadow: inset 0 0.1vw 0.1vw #edd8ff, inset 0.01vw 0 0.3vw #edd8ff, inset 0.1vw 0 0.5vw #edd8ff, inset 0 -0.1vw 0.1vw #edd8ff, 0 0 0.1vw rgba(0, 0, 0, 0.24);
+    }
+
+    .btn-oval_authorisation:active {
+        background: #f44336;
+        box-shadow: inset 0 0.1vw 1vw purple;
+        padding: 0.1vw 0 0 0.1vw;
+    }
+
+.aut_reg_a {
+    margin-top: 9vw;
+    margin-left: 4vw;
+    font-size: 0.9vw;
+    color: black;
+}

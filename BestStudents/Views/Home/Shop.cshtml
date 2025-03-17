@@ -1,0 +1,72 @@
+﻿@{
+    ViewBag.Title = "Shop";
+}
+
+    <!--ListProducts-->
+<form method="post" action="~/Home/Add">
+    <table class="timeTable">
+        <tr>
+
+            <td style="border: #f44336 0.2vw solid; border-collapse: collapse; width: 30vw; ">Название</td>
+            <td style="border: #f44336 0.2vw solid; border-collapse: collapse; width: 5vw; ">Стоимость</td>
+            <td style="border: #f44336 0.2vw solid; border-collapse: collapse; width: 5vw; ">Количество на складе</td>
+            <td style="border: #f44336 0.2vw solid; border-collapse: collapse; width: 30vw; ">Описание</td>
+            <td style="border: #f44336 0.2vw solid; border-collapse: collapse; width: 10vw; ">Добавить в корзину</td>
+
+        </tr>
+        @foreach (var item in ViewBag.listproducts)
+        {
+            <tr>
+                <td style="border: #f44336 0.2vw solid; border-collapse: collapse; width: 30vw; ">@item.Name</td>
+                <td style="border: #f44336 0.2vw solid; border-collapse: collapse; width: 5vw; ">@item.Cost</td>
+                <td style="border: #f44336 0.2vw solid; border-collapse: collapse; width: 5vw; ">@item.Count</td>
+                <td style="border: #f44336 0.2vw solid; border-collapse: collapse; width: 30vw; ">@item.Description</td>
+               @* <td style="border: #f44336 0.2vw solid; border-collapse: collapse; width: 10vw; "><input class="btn-add" type="submit" name="rad" id="@item.Id" value="Добавить в корзину" /></td>*@
+                <td style="border: #f44336 0.2vw solid; border-collapse: collapse; width: 10vw;"><a>@Html.ActionLink("Добавить в корзину", "Add", new { IdProduct = item.Id })</a></td>
+            </tr>
+        }
+    </table>
+
+</form>
+
+    <div class="box">
+
+        <p class="Sort">Сортировка</p>
+
+        <div>
+            <p>
+                <a class="sortselect">@Html.ActionLink("Материнская плата", "SortProducts", new { Sort = "Материнская плата" })</a>
+            </p>
+        </div>
+
+        <div>
+            <p>
+                <a class="sortselect">@Html.ActionLink("Блок питания", "SortProducts", new { Sort = "Блок питания" })</a>
+            </p>
+        </div>
+
+        <div>
+            <p>
+                <a class="sortselect">@Html.ActionLink("Видеокарта", "SortProducts", new { Sort = "Видеокарта" })</a>
+            </p>
+        </div>
+
+        <div>
+            <p>
+                <a class="sortselect">@Html.ActionLink("Процессор", "SortProducts", new { Sort = "Процессор" })</a>
+            </p>
+        </div>
+
+        <div>
+            <p>
+                <a class="sortselect">@Html.ActionLink("Оперативная память", "SortProducts", new { Sort = "Оперативная память" })</a>
+            </p>
+        </div>
+
+        <div>
+            <p>
+                <a class="sortselect">@Html.ActionLink("Кулер для процессора", "SortProducts", new { Sort = "Кулер для процессора" })</a>
+            </p>
+        </div>
+
+    </div>

@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "Account";
+}
+
+
+<div class="block_info">
+    <p class="txt_main">Логин:<p>
+    <p class="txt_main_login">@ViewBag.Login</p>
+
+    <p class="txt_main">Email:<p>
+    <p class="txt_main_login">@ViewBag.Email</p>
+
+    <p class="txt_main">Кошелек:</p>
+    <p class="txt_main_login">@ViewBag.Money</p>
+
+    <iframe src="http://arbuzova.mooseum.ru/1-rubrika/13-demo/clock-02.html" width="260" height="280"
+            marginheight=0 marginwidth=0 scrolling="no" style="border:none; margin-left:10vw; margin-top:5vw;">
+    </iframe>
+
+</div>
+
+<!--ListProducts-->
+<table class="timeTable">
+    <tr>
+
+        <td style="border: #f44336 0.2vw solid; border-collapse: collapse; width: 20vw; ">Название</td>
+        <td style="border: #f44336 0.2vw solid; border-collapse: collapse; width: 5vw; ">Стоимость</td>
+        <td style="border: #f44336 0.2vw solid; border-collapse: collapse; width: 5vw; ">Количество</td>
+        <td style="border: #f44336 0.2vw solid; border-collapse: collapse; width: 30vw; ">Описание</td>
+    </tr>
+    @foreach (var item in ViewBag.listbasket)
+    {
+        <tr>
+            <td style="border: #f44336 0.2vw solid; border-collapse: collapse; width: 20vw; ">@item.Name</td>
+            <td style="border: #f44336 0.2vw solid; border-collapse: collapse; width: 5vw; ">@item.Cost</td>
+            <td style="border: #f44336 0.2vw solid; border-collapse: collapse; width: 5vw; ">@item.Count</td>
+            <td style="border: #f44336 0.2vw solid; border-collapse: collapse; width: 30vw; ">@item.Description</td>
+        </tr>
+    }
+</table>
+
+<form method="post" action="~/Home/Buy">
+    <div class="block_buy">
+
+        <p class="txt_buy">Стоимость покупок:</p>
+
+        <p name="Money2" id="Money2" class="txt_number">@ViewBag.Cost</p>
+
+        <p class="txt_buy">Количество покупок:</p>
+
+        <p class="txt_number">@ViewBag.Count</p>
+
+        <p>
+            <input class="btn btn-oval_buy" type="submit" value="Купить" />
+        </p>
+    </div>
+    </form>

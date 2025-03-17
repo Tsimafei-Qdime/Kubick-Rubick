@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <title>Kubick-Rubick</title>
+    <link rel="shortcut icon" type="image/x-icon" href="~/Content/Images/Logo.png" />
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    <header>
+        <div class="navigation">
+            <div class="menuToggle"></div>
+
+            <ul>
+                <li class="list" id="menu_item1" style="--clr:#f44336;">
+                    <a href="~/Home/Shop">
+                        <span class="icon"><ion-icon name="storefront-outline"></ion-icon></span>
+                        <span class="text">Каталог</span>
+                    </a>
+                </li>
+                <li class="list" id="menu_item2" style="--clr:#f44336;">
+                    <a href="~/Home/Account">
+                        <span class="icon"><ion-icon name="briefcase-outline"></ion-icon></span>
+                        <span class="text">Личный кабинет</span>
+                    </a>
+                </li>
+                <li class="list" id="menu_item3" style="--clr:#f44336;">
+                    <a href="~/Home/Login">
+                        <span class="icon"><ion-icon name="body-outline"></ion-icon></span>
+                        <span class="text">Войти</span>
+                    </a>
+                </li>
+                <li class="list active" id="menu_item4" style="--clr:#f44336;">
+                    <a href="~/Home/Main">
+                        <span class="icon"><ion-icon name="information-circle-outline"></ion-icon></span>
+                        <span class="text">О сайте</span>
+                    </a>
+                </li>
+            </ul>
+
+
+        </div>
+    </header>
+
+
+    @RenderBody()
+
+
+    <script>
+        const menuToggle = document.querySelector('.menuToggle');
+        const navigation = document.querySelector('.navigation');
+        menuToggle.onclick = function () {
+            navigation.classList.toggle('open')
+        }
+
+
+
+        const handler = (e) => {
+
+            const list = document.querySelectorAll('.list');
+
+            list.forEach((item) =>
+                item.classList.remove('active'));
+
+            //this.classList.add('active');
+
+            var item = document.getElementById('@ViewBag.menu_item');
+            item.classList.add('active');
+        }
+        document.addEventListener('DOMContentLoaded', handler);
+
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+﻿.tableusers {
+    position: relative;
+    margin-left: 5vw;
+    margin-bottom: 10vw;
+    font-size: 1.5vw;
+    z-index: 1;
+    color: #ffffff;
+}
+
+.block_admin {
+    position: absolute;
+    left: 63vw;
+    top: 3vw;
+    font-size:1.5vw;
+}
+
+.input_mn {
+    position: absolute;
+    left: 13vw;
+    top: 0vw;
+    font-size: 1.5vw;
+}
+
+/*Button Download*/
+.btn-oval_del {
+    display: inline-block;
+    width: 16vw;
+    height: 3.5vw;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 1.2vw;
+    color: #fff;
+    text-decoration: none;
+    background: purple;
+    background-color: #f44336;
+    border-radius: 40vw;
+    border: 0.1vw solid purple;
+    font: bold 1.6vw/3.5vw Arial;
+    box-shadow: inset 0 0.1vw 0.1vw #edd8ff, inset 0.01vw 0 0.3vw #edd8ff, inset 0.1vw 0 0.5vw #edd8ff, inset 0 -0.1vw 0.1vw #edd8ff, 0 0 0.1vw rgba(0, 0, 0, 0.24);
+    position: relative;
+    text-shadow: 0 0.1vw black;
+    outline: none;
+    top: -1vw;
+    margin-left: 3.5vw;
+    left: -4vw;
+}
+
+    .btn-oval_del:before {
+        content: "";
+        position: absolute;
+        top: -1vw;
+        left: -1vw;
+        width: 20vw;
+        height: 20vw;
+        padding: 1vw;
+        background: black;
+        z-index: -1;
+        border-radius: 40vw;
+        box-shadow: inset 0 0.1vw 0.5vw #edd8ff;
+    }
+
+    .btn-oval_del:hover {
+        background: #fb6d62;
+        box-shadow: inset 0 0.1vw 0.1vw #edd8ff, inset 0.01vw 0 0.3vw #edd8ff, inset 0.1vw 0 0.5vw #edd8ff, inset 0 -0.1vw 0.1vw #edd8ff, 0 0 0.1vw rgba(0, 0, 0, 0.24);
+    }
+
+    .btn-oval_del:active {
+        background: #f44336;
+        box-shadow: inset 0 0.1vw 1vw #3c7b00;
+        padding: 0.1vw 0 0 0.1vw;
+    }
+
+
+/*Button Download*/
+.btn-oval_report {
+    display: inline-block;
+    width: 35vw;
+    height: 3.5vw;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 1.2vw;
+    color: #fff;
+    text-decoration: none;
+    background: purple;
+    background-color: #f44336;
+    border-radius: 40vw;
+    border: 0.1vw solid purple;
+    font: bold 1.6vw/3.5vw Arial;
+    box-shadow: inset 0 0.1vw 0.1vw #edd8ff, inset 0.01vw 0 0.3vw #edd8ff, inset 0.1vw 0 0.5vw #edd8ff, inset 0 -0.1vw 0.1vw #edd8ff, 0 0 0.1vw rgba(0, 0, 0, 0.24);
+    position: relative;
+    text-shadow: 0 0.1vw black;
+    outline: none;
+    top: 1vw;
+    margin-left: 3.5vw;
+    left: -4vw;
+}
+
+    .btn-oval_report:before {
+        content: "";
+        position: absolute;
+        top: -1vw;
+        left: -1vw;
+        width: 20vw;
+        height: 20vw;
+        padding: 1vw;
+        background: black;
+        z-index: -1;
+        border-radius: 40vw;
+        box-shadow: inset 0 0.1vw 0.5vw #edd8ff;
+    }
+
+    .btn-oval_report:hover {
+        background: #fb6d62;
+        box-shadow: inset 0 0.1vw 0.1vw #edd8ff, inset 0.01vw 0 0.3vw #edd8ff, inset 0.1vw 0 0.5vw #edd8ff, inset 0 -0.1vw 0.1vw #edd8ff, 0 0 0.1vw rgba(0, 0, 0, 0.24);
+    }
+
+    .btn-oval_report:active {
+        background: #f44336;
+        box-shadow: inset 0 0.1vw 1vw #3c7b00;
+        padding: 0.1vw 0 0 0.1vw;
+    }
+
+
+
+/*Button Download*/
+.btn-oval_add_money {
+    display: inline-block;
+    width: 16vw;
+    height: 3.5vw;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 1.2vw;
+    color: #fff;
+    text-decoration: none;
+    background: purple;
+    background-color: #f44336;
+    border-radius: 40vw;
+    border: 0.1vw solid purple;
+    font: bold 1.6vw/3.5vw Arial;
+    box-shadow: inset 0 0.1vw 0.1vw #edd8ff, inset 0.01vw 0 0.3vw #edd8ff, inset 0.1vw 0 0.5vw #edd8ff, inset 0 -0.1vw 0.1vw #edd8ff, 0 0 0.1vw rgba(0, 0, 0, 0.24);
+    position: relative;
+    text-shadow: 0 0.1vw black;
+    outline: none;
+    top: 2.5vw;
+    margin-left: 3.5vw;
+    left: 15vw;
+}
+
+    .btn-oval_add_money:before {
+        content: "";
+        position: absolute;
+        top: -1vw;
+        left: -1vw;
+        width: 20vw;
+        height: 20vw;
+        padding: 1vw;
+        background: black;
+        z-index: -1;
+        border-radius: 40vw;
+        box-shadow: inset 0 0.1vw 0.5vw #edd8ff;
+    }
+
+    .btn-oval_add_money:hover {
+        background: #fb6d62;
+        box-shadow: inset 0 0.1vw 0.1vw #edd8ff, inset 0.01vw 0 0.3vw #edd8ff, inset 0.1vw 0 0.5vw #edd8ff, inset 0 -0.1vw 0.1vw #edd8ff, 0 0 0.1vw rgba(0, 0, 0, 0.24);
+    }
+
+    .btn-oval_add_money:active {
+        background: #f44336;
+        box-shadow: inset 0 0.1vw 1vw #3c7b00;
+        padding: 0.1vw 0 0 0.1vw;
+    }

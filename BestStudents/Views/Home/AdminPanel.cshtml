@@ -1,0 +1,60 @@
+﻿@{
+    ViewBag.Title = "AdminPanel";
+}
+
+<table class="tableusers">
+    <caption>Аккаунты</caption>
+    @foreach (var item in ViewBag.listusers)
+    {
+        <tr>
+            <td style="text-align:center; border: #f44336 0.2vw solid; border-collapse: collapse; width: 2vw;">@item.UserId</td>
+            <td style="text-align: center; border: #f44336 0.2vw solid; border-collapse: collapse; width: 12vw;">@item.Name</td>
+            <td style="text-align: center; border: #f44336 0.2vw solid; border-collapse: collapse; width: 20vw;">@item.Email</td>
+            <td style="text-align: center; border: #f44336 0.2vw solid; border-collapse: collapse; width: 14vw; ">@item.PhoneNumber</td>
+            <td style="text-align: center; border: #f44336 0.2vw solid; border-collapse: collapse; width: 5vw;">@item.Money</td>
+            <td style="text-align: center; border: #f44336 0.2vw solid; border-collapse: collapse; width: 2vw;">@item.RoleId</td>
+            <td style="text-align: center; border: #f44336 0.2vw solid; border-collapse: collapse; "><input type="radio" name="rad" id="@item.UserId" onchange="change()" /></td>
+        </tr>
+    }
+</table>
+
+<div class="block_admin">
+
+    <p style=" color: #ffffff;">Добавить деньги:</p>
+    <form method="get" action="~/Home/AddMoney">
+        <input name="money" id="money" type="text" class="input_mn" required />
+
+        <input class="btn btn-oval_add_money" type="submit" value="Добавить деньги" />
+        <input type="hidden" id="addMoney" name="addMoney" value="" />
+    </form>
+
+    <form method="get" action="~/Home/Delete">
+        <input class="btn btn-oval_del" type="submit" value="Удалить аккаунт" />
+        <input type="hidden" id="delSelectedItem" name="delSelectedItem" value="" />
+    </form>
+
+
+    <form method="get" action="~/Home/TakeReport">
+        <input class="btn btn-oval_report" type="submit" value="Получить отчет" />
+        <input type="hidden" id="delSelectedItem" name="delSelectedItem" value="" />
+    </form>
+
+</div>
+<script>
+    function change() {
+        let elem = document.getElementsByName('rad');
+        let add = document.getElementsByName('addMoney')
+        elem.forEach(item => {
+            if (item.checked) {
+                add[0].value = item.id;
+            }
+        })
+
+        let del = document.getElementsByName('delSelectedItem')
+        elem.forEach(item => {
+            if (item.checked) {
+                del[0].value = item.id;
+            }
+        })
+    }
+</script>

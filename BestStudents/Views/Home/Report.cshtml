@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Report";
+}
+
+<!--ListProducts-->
+    <table class="timeTable">
+        <tr>
+            <td style="border: #f44336 0.2vw solid; border-collapse: collapse; width: 30vw; ">Дата</td>
+            <td style="border: #f44336 0.2vw solid; border-collapse: collapse; width: 5vw; ">Стоимость</td>
+            <td style="border: #f44336 0.2vw solid; border-collapse: collapse; width: 30vw; ">Описание</td>
+
+        </tr>
+        @foreach (var item in ViewBag.listreport)
+        {
+            <tr>
+                <td style="border: #f44336 0.2vw solid; border-collapse: collapse; width: 30vw; ">@item.Date</td>
+                <td style="border: #f44336 0.2vw solid; border-collapse: collapse; width: 5vw; ">@item.Money</td>
+                <td style="border: #f44336 0.2vw solid; border-collapse: collapse; width: 5vw; ">@item.Description</td>
+            </tr>
+        }
+    </table>

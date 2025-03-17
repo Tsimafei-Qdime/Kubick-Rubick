@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Login";
+}
+
+<main class="block_main_auth">
+    <form method="post" action="~/Home/Aut">
+        <p class="aut_auth">Авторизация</p>
+
+        <div class="block1_auth">
+            <p class="Text_auth">Логин</p>
+            <input name="login" id="login" type="text" class="input_auth" />
+            <p class="Text_auth">Пароль</p>
+            <input name="password" id="password" type="password" class="input_auth" required />
+
+            <p style=" margin-top: 0.7vw; margin-left: 2vw; font-size: 1vw; color: red; position:absolute;">@ViewBag.Error</p>
+            <p>
+                <input class="btn btn-oval_authorisation" type="submit" value="Войти" />
+                </p>
+            <p class="aut_reg_a">
+            <a href="~/Home/Registration" style="text-decoration:none">Еще нет аккаунта? Зарегистрируйся</a>
+            </p>
+        </div>
+    </form>
+</main>

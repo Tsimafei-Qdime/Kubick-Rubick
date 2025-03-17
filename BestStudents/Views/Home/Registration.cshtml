@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Registration";
+}
+
+<main class="block_main_reg">
+    <form method="post" action="~/Home/Reg">
+        <p class="aut_reg">Регистрация</p>
+
+        <div class="block1_reg">
+            <p class="Text_reg">Логин</p>
+            <input id="login" name="login" type="text" class="input_reg" />
+
+            <p class="Text_reg">Email</p>
+            <input id="email" name="email" type="email" class="input_reg" />
+
+            <p class="Text_reg">Мобильный телефон</p>
+            <input id="phone" name="phone" type="tel" class="input_reg" />
+
+            <p class="Text_reg">Пароль</p>
+            <input id="password" name="password" type="password" class="input_reg" />
+
+            <p class="Text_reg">Повтор пароля</p>
+            <input id="passwordCheck" name="passwrodCheck" type="password" class="input_reg" />
+
+            <p style=" margin-top: 0.7vw; margin-left: 2vw; font-size: 1vw; color: red; position:absolute;">@ViewBag.Error</p>
+
+            <input class="btn btn-oval_reg" type="submit" value="Войти" />
+        </div>
+    </form>
+</main>
